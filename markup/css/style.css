@@ -1,0 +1,56 @@
+.menu {
+    list-style: none;
+    /* Убрали из меню подчеркивания */
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    list-style: none;
+}
+
+.menu>li {
+    position: relative;
+    /* зафиксировали */
+    display: inline-block;
+    /* в одну строку */
+    padding: 10px;
+    /* дали размеры */
+    margin-right: -4px;
+    /* убрали боковой отступ */
+    background: #333333;
+    color: white;
+    text-transform: uppercase;
+    /* Меню */
+}
+
+.menu ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+    background: #009eff;
+}
+
+.menu ul ul {
+    top: 0;
+    left: 100%;
+    background: #16a0f6;
+}
+
+span {
+    display: none;
+}
+
+.menu>li:hover span {
+    display: inline-block;
+    padding: 0 0 0 10px;
+}
+
+.menu li:hover {
+    background: #16a0f6;
+}
+
+.menu li:hover>ul {
+    display: block;
+}
